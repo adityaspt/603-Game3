@@ -1638,7 +1638,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27612
+  m_Name: pb_Mesh27616
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1808,7 +1808,7 @@ GameObject:
   - component: {fileID: 302464849}
   - component: {fileID: 302464848}
   - component: {fileID: 302464847}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ground1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6559,6 +6559,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground1_5
       objectReference: {fileID: 0}
+    - target: {fileID: 8846571967853965394, guid: d1fb70e9192c51f438a1ac00b5dcb334,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8846571967856225938, guid: d1fb70e9192c51f438a1ac00b5dcb334,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7734,21 +7739,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2444922637257574774, guid: ad6649d0d281a0d4a82fd8511b821ad3,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.583
-      objectReference: {fileID: 0}
-    - target: {fileID: 2894963062834807652, guid: ad6649d0d281a0d4a82fd8511b821ad3,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2894963062834807652, guid: ad6649d0d281a0d4a82fd8511b821ad3,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
     - target: {fileID: 2894963062834807653, guid: ad6649d0d281a0d4a82fd8511b821ad3,
         type: 3}
       propertyPath: m_Name
@@ -7808,21 +7798,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2894963062834807659, guid: ad6649d0d281a0d4a82fd8511b821ad3,
-        type: 3}
-      propertyPath: groundChecker
-      value: 
-      objectReference: {fileID: 1179860030}
-    - target: {fileID: 2894963062834807659, guid: ad6649d0d281a0d4a82fd8511b821ad3,
-        type: 3}
-      propertyPath: checkGroundRadius
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2894963062834807659, guid: ad6649d0d281a0d4a82fd8511b821ad3,
-        type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad6649d0d281a0d4a82fd8511b821ad3, type: 3}
@@ -8099,7 +8074,7 @@ GameObject:
   - component: {fileID: 898283515}
   - component: {fileID: 898283514}
   - component: {fileID: 898283513}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ground1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9441,6 +9416,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground1_0
       objectReference: {fileID: 0}
+    - target: {fileID: 313679026739273637, guid: b16f9e5a798e7a14db2b313b856dc2af,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 313679026739692421, guid: b16f9e5a798e7a14db2b313b856dc2af,
         type: 3}
       propertyPath: m_RootOrder
@@ -9667,7 +9647,7 @@ GameObject:
   - component: {fileID: 926795214}
   - component: {fileID: 926795213}
   - component: {fileID: 926795218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ground1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11523,7 +11503,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27310
+  m_Name: pb_Mesh27308
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12119,12 +12099,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1126723115684112193, guid: afa7878a429a6f24a84259ff52bf99bb,
     type: 3}
   m_PrefabInstance: {fileID: 1179595343}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1179860030 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2444922637257574774, guid: ad6649d0d281a0d4a82fd8511b821ad3,
-    type: 3}
-  m_PrefabInstance: {fileID: 841320962}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &1205930516
 Mesh:
@@ -15545,7 +15519,7 @@ GameObject:
   - component: {fileID: 1774059565}
   - component: {fileID: 1774059564}
   - component: {fileID: 1774059563}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ground0_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18057,10 +18031,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 693428907}
     m_Modifications:
+    - target: {fileID: 3109988724468936182, guid: f0fad15f66d5d9d4a9d674a980e04dc8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4132240116522815896, guid: f0fad15f66d5d9d4a9d674a980e04dc8,
         type: 3}
       propertyPath: m_Name
       value: ground1_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132240116522815896, guid: f0fad15f66d5d9d4a9d674a980e04dc8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6526571075498133384, guid: f0fad15f66d5d9d4a9d674a980e04dc8,
         type: 3}
