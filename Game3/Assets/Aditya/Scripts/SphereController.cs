@@ -38,4 +38,9 @@ public class SphereController : MonoBehaviour
     {
         
     }
+
+	private void OnTriggerEnter(Collider other)
+	{
+		
+	}
 }
