@@ -29,8 +29,71 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5875468250099434007}
-  - {fileID: 6011557508097535342}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4570611269761977719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3603700075592083087}
+  m_Layer: 0
+  m_Name: LowerLimit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3603700075592083087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570611269761977719}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6138320898360083472}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7994134002829506673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6138320898360083472}
+  m_Layer: 0
+  m_Name: UpperLimit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6138320898360083472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994134002829506673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.7021277, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6011557508097535342}
+  - {fileID: 3603700075592083087}
+  m_Father: {fileID: 5875468250099434007}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6125370084736343609
@@ -38,32 +101,43 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 5407961155305000202}
+    m_TransformParent: {fileID: 6138320898360083472}
     m_Modifications:
+    - target: {fileID: -2021552326274503523, guid: e07d5329b5631b24bb204c1f44b44a53,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2021552326274503523, guid: e07d5329b5631b24bb204c1f44b44a53,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: bebcb2ab40266894eb51ffd0f750822f,
+        type: 2}
     - target: {fileID: 463017611638632311, guid: e07d5329b5631b24bb204c1f44b44a53,
         type: 3}
       propertyPath: m_Name
-      value: Prop_Building_Savage_Tribal_Timber_Tower_Middle_01 (1)
+      value: ButtonTop
       objectReference: {fileID: 0}
     - target: {fileID: 463017611639124823, guid: e07d5329b5631b24bb204c1f44b44a53,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 463017611639124823, guid: e07d5329b5631b24bb204c1f44b44a53,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.82
+      value: 0.8200001
       objectReference: {fileID: 0}
     - target: {fileID: 463017611639124823, guid: e07d5329b5631b24bb204c1f44b44a53,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.42
+      value: 0.8936171
       objectReference: {fileID: 0}
     - target: {fileID: 463017611639124823, guid: e07d5329b5631b24bb204c1f44b44a53,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.82
+      value: 0.8200001
       objectReference: {fileID: 0}
     - target: {fileID: 463017611639124823, guid: e07d5329b5631b24bb204c1f44b44a53,
         type: 3}
@@ -120,8 +194,31 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 463017611646016695, guid: e07d5329b5631b24bb204c1f44b44a53, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e07d5329b5631b24bb204c1f44b44a53, type: 3}
+--- !u!1 &6011557508097503566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 463017611638632311, guid: e07d5329b5631b24bb204c1f44b44a53,
+    type: 3}
+  m_PrefabInstance: {fileID: 6125370084736343609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &8319088505716365800
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011557508097503566}
+  serializedVersion: 2
+  m_Mass: 5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!4 &6011557508097535342 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 463017611639124823, guid: e07d5329b5631b24bb204c1f44b44a53,
@@ -135,6 +232,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5407961155305000202}
     m_Modifications:
+    - target: {fileID: -2021552326274503523, guid: e07d5329b5631b24bb204c1f44b44a53,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 463017611636699575, guid: e07d5329b5631b24bb204c1f44b44a53,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -143,7 +245,7 @@ PrefabInstance:
     - target: {fileID: 463017611638632311, guid: e07d5329b5631b24bb204c1f44b44a53,
         type: 3}
       propertyPath: m_Name
-      value: Prop_Building_Savage_Tribal_Timber_Tower_Middle_01
+      value: Base
       objectReference: {fileID: 0}
     - target: {fileID: 463017611639124823, guid: e07d5329b5631b24bb204c1f44b44a53,
         type: 3}
@@ -163,7 +265,7 @@ PrefabInstance:
     - target: {fileID: 463017611639124823, guid: e07d5329b5631b24bb204c1f44b44a53,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 463017611639124823, guid: e07d5329b5631b24bb204c1f44b44a53,
         type: 3}
@@ -218,3 +320,46 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6333507135640219968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5875468250099539511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 463017611638632311, guid: e07d5329b5631b24bb204c1f44b44a53,
+    type: 3}
+  m_PrefabInstance: {fileID: 6333507135640219968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &742523163937577942
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5875468250099539511}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!114 &8605691140703557729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5875468250099539511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20f8dac59590d04a83f2e0730da23a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonTopRigid: {fileID: 0}
+  buttonTop: {fileID: 0}
+  buttonLowerLimit: {fileID: 0}
+  buttonUpperLimit: {fileID: 0}
+  threshHold: 0.5
+  force: 300
+  isPressed: 0
+  CollidersToIgnore: []
+  movingPlatform: {fileID: 0}
