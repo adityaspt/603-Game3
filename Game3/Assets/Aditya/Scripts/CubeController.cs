@@ -44,7 +44,7 @@ public class CubeController : MonoBehaviour
     {
 
 
-        transform.Translate(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * Time.deltaTime * moveSpeed);
+        transform.Translate(new Vector3(Input.GetAxis("HorizontalWASD"), 0, Input.GetAxis("VerticalWASD")) * Time.deltaTime * moveSpeed);
 
         isGrounded = CheckIfGrounded();
 
