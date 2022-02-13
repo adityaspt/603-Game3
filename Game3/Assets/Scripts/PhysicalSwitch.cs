@@ -22,6 +22,10 @@ public class PhysicalSwitch : MonoBehaviour
     public event EventHandler onReleased;
 
     //controlled object
+
+    [SerializeField]
+    bool isControllingMovingPlatform=false, isControllingGate=false;
+
     [SerializeField]
     MovingPlatform movingPlatform;
 
