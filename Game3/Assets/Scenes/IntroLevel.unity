@@ -1389,7 +1389,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28206
+  m_Name: pb_Mesh28208
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6881,7 +6881,7 @@ MonoBehaviour:
     ModeOverride: 2
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7316576, y: 1}
+    m_SensorSize: {x: 3.2075477, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6897,8 +6897,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498386452}
-  m_LocalRotation: {x: 0.113867514, y: 0.03773162, z: -0.004327696, w: 0.9927698}
-  m_LocalPosition: {x: -47.14917, y: 8.671131, z: -30.725723}
+  m_LocalRotation: {x: 0.11562555, y: 0.04120655, z: -0.00480089, w: 0.9924262}
+  m_LocalPosition: {x: -41.646492, y: 10.188871, z: -32.46006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7062,7 +7062,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28128
+  m_Name: pb_Mesh28130
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11587,7 +11587,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 24.58416
+  field of view: 35.31174
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -11612,8 +11612,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065413415}
-  m_LocalRotation: {x: 0.113867514, y: 0.03773162, z: -0.004327696, w: 0.9927698}
-  m_LocalPosition: {x: -47.14917, y: 8.671131, z: -30.725723}
+  m_LocalRotation: {x: 0.11562555, y: 0.04120655, z: -0.00480089, w: 0.9924262}
+  m_LocalPosition: {x: -41.646492, y: 10.188871, z: -32.46006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15381,7 +15381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621475629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.14917, y: 0.67113155, z: -0.7257242}
+  m_LocalPosition: {x: -41.646492, y: 2.1888719, z: -2.4600613}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18296,6 +18296,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: moving platform1
       objectReference: {fileID: 0}
+    - target: {fileID: 1763995320367670300, guid: 6048e901330264843bcc84155ca17e49,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6048e901330264843bcc84155ca17e49, type: 3}
 --- !u!4 &1763995320198124660 stripped
@@ -19089,7 +19094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832149484603677800}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47.528, y: 0.664, z: -0.732}
+  m_LocalPosition: {x: -43.8, y: 2.4, z: -1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20928,6 +20933,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: liftable flatform1
       objectReference: {fileID: 0}
+    - target: {fileID: 6544961949255739792, guid: 4ce876a6483d65d4cada333111c604db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6544961949255739793, guid: 4ce876a6483d65d4cada333111c604db,
         type: 3}
       propertyPath: m_Mesh
@@ -21317,7 +21327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8204707764674294945}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -46.2, y: 0.689, z: -0.71}
+  m_LocalPosition: {x: -38.7, y: 1.9, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
