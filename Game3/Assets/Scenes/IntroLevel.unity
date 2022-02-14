@@ -6881,7 +6881,7 @@ MonoBehaviour:
     ModeOverride: 2
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 4.1786885, y: 1}
+    m_SensorSize: {x: 1.7316576, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11842,23 +11842,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 2, y: 1, z: 0}
-  m_LookaheadTime: 0.1
-  m_LookaheadSmoothing: 2
+  m_LookaheadTime: 0.2
+  m_LookaheadSmoothing: 5
   m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0.5
-  m_VerticalDamping: 0.5
+  m_HorizontalDamping: 1
+  m_VerticalDamping: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0.5
   m_DeadZoneHeight: 0.5
-  m_SoftZoneWidth: 0.6
+  m_SoftZoneWidth: 0.55
   m_SoftZoneHeight: 0.6
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
   m_GroupFramingSize: 0.15
   m_FramingMode: 2
-  m_FrameDamping: 3
+  m_FrameDamping: 5
   m_AdjustmentMode: 0
   m_MaxDollyIn: 5000
   m_MaxDollyOut: 5000
