@@ -71,6 +71,12 @@ public class LaserButton : MonoBehaviour
     {
         onPressed?.Invoke(this, new EventTriggerSet.eventTrigger { typeOfEventTrigger = EventTriggerSet.typeOfTrigger.laser });
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        onPressed?.Invoke(this, new EventTriggerSet.eventTrigger { typeOfEventTrigger = EventTriggerSet.typeOfTrigger.laser });
+    }
+
     private void OnTriggerExit(Collider other)
     {
         onReleased?.Invoke(this, new EventTriggerSet.eventTrigger { typeOfEventTrigger = EventTriggerSet.typeOfTrigger.laser });

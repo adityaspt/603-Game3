@@ -150,4 +150,14 @@ public class MovingPlatform : MonoBehaviour
         }
 
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        collision.gameObject.transform.parent = transform;
+    }
+
+    public void OnCollisionExit(Collision collision)
+    {
+        collision.gameObject.transform.parent = null;
+    }
 }
