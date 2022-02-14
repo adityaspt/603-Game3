@@ -5,18 +5,19 @@ using System;
 
 public class LaserButton : MonoBehaviour
 {
-    //[SerializeField]
-    //bool startAction = false;
-
-    //[SerializeField]
-    //bool exitAction = false;
-
-    [SerializeField]
+   [SerializeField]
     MovingPlatform movingPlatformObj;
 
-    public event EventHandler onPressed;
+    [SerializeField]
+    LiftingPlatform liftingPlatformObj;
 
-    public event EventHandler onReleased;
+    public event EventHandler<EventTriggerSet.eventTrigger> onPressed;
+
+    public event EventHandler<EventTriggerSet.eventTrigger> onReleased;
+
+    [SerializeField]
+    bool isControllingMovingPlatform = false, isControllingLiftingPlatform = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,32 +26,56 @@ public class LaserButton : MonoBehaviour
     }
     private void OnEnable()
     {
-        onPressed += movingPlatformObj.onStartMove;
-        onReleased += movingPlatformObj.Release;
+        if (isControllingMovingPlatform)
+        {
+            onPressed += movingPlatformObj.onStartMove;
+            onReleased += movingPlatformObj.Release;
+        }
+        else if (isControllingLiftingPlatform)
+        {
+            onPressed += liftingPlatformObj.onPressed;
+            onReleased += liftingPlatformObj.onReleased;
+        }
+        else
+        {
+            Debug.LogWarning("Set the booleans correct in the inspector");
+        }
     }
 
     private void OnDisable()
     {
-        onPressed -= movingPlatformObj.onStartMove;
-        onReleased -= movingPlatformObj.Release;
+        if (isControllingMovingPlatform)
+        {
+            onPressed -= movingPlatformObj.onStartMove;
+            onReleased -= movingPlatformObj.Release;
+        }
+        else if (isControllingLiftingPlatform)
+        {
+            onPressed -= liftingPlatformObj.onPressed;
+            onReleased -= liftingPlatformObj.onReleased;
+        }
+        else
+        {
+            Debug.LogWarning("Set the booleans correct in the inspector");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-     
+
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        onPressed?.Invoke(this, EventArgs.Empty);
+        onPressed?.Invoke(this, new EventTriggerSet.eventTrigger { typeOfEventTrigger = EventTriggerSet.typeOfTrigger.laser });
     }
     private void OnTriggerExit(Collider other)
     {
-        onReleased?.Invoke(this, EventArgs.Empty);
+        onReleased?.Invoke(this, new EventTriggerSet.eventTrigger { typeOfEventTrigger = EventTriggerSet.typeOfTrigger.laser });
     }
 
 
-  
+
 }
