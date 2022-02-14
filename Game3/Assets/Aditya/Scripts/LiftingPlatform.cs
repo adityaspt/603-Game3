@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fence : MonoBehaviour
+public class LiftingPlatform : MonoBehaviour
 {
-
     [SerializeField]
     float moveSpeed;
 
@@ -16,7 +15,11 @@ public class Fence : MonoBehaviour
     Vector3 endPosition;
 
     [SerializeField]
+    Vector3 targetPosition;
+
+    [SerializeField]
     bool isStarted = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,15 +31,24 @@ public class Fence : MonoBehaviour
     void Update()
     {
         if (isStarted)
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, endPosition, moveSpeed * Time.deltaTime);
-        if (transform.localPosition == endPosition)
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPosition, moveSpeed * Time.deltaTime);
+        if (transform.localPosition == targetPosition)
         {
             isStarted = false;
         }
+        
     }
 
-    public void StartFenceMove(object sender, EventArgs e)
+    public void onPressed(object sender, EventTriggerSet.eventTrigger e)
     {
         isStarted = true;
+        targetPosition = endPosition;
     }
+
+    public void onReleased(object sender, EventTriggerSet.eventTrigger e)
+    {
+        isStarted = true;
+        targetPosition = startPosition;
+    }
+
 }
