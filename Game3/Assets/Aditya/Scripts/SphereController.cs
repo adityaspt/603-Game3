@@ -24,23 +24,35 @@ public class SphereController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float movementHorizontal = Input.GetAxis("HorizontalArrow");
-        float movementVertical = Input.GetAxis("VerticalArrow");
+		//float movementHorizontal = Input.GetAxis("HorizontalArrow");
+		//float movementVertical = Input.GetAxis("VerticalArrow");
 
-        Vector3 movement = new Vector3(movementHorizontal, 0.0f, movementVertical);
+		//Debug.Log(movementHorizontal + " " + movementVertical);
 
-        rb.AddForce(movement * speed);
+		//Vector3 movement = new Vector3(movementHorizontal, 0.0f, movementVertical);
 
-    }
+		//rb.AddForce(movement * speed);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-	private void OnTriggerEnter(Collider other)
-	{
-		
+		if (Input.GetKey(KeyCode.UpArrow))
+		{
+			transform.Rotate(Vector3.right * speed);
+			rb.AddForce(Vector3.forward * speed);
+		}
+		if (Input.GetKey(KeyCode.DownArrow))
+		{
+			transform.Rotate(Vector3.right * -speed);
+			rb.AddForce(Vector3.forward * -speed);
+		}
+		if (Input.GetKey(KeyCode.LeftArrow))
+		{
+			transform.Rotate(Vector3.forward * speed);
+			rb.AddForce(Vector3.right * -speed);
+		}
+		if (Input.GetKey(KeyCode.RightArrow))
+		{
+			transform.Rotate(Vector3.forward * -speed);
+			rb.AddForce(Vector3.right * speed);
+		}
 	}
+
 }
