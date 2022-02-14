@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: 937422fabaaa2a642b7418ff65be53d8
-=======
-guid: 8ff5bd35ca27bdf40b14e06ebdedf443
->>>>>>> Stashed changes
+guid: c2e5bfa7e9462d54f8ec4fed32f2bbd6
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -39,11 +35,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-<<<<<<< Updated upstream
-    globalScale: 1
-=======
-    globalScale: 0.3908
->>>>>>> Stashed changes
+    globalScale: 0.003908
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -74,14 +66,10 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-<<<<<<< Updated upstream
-    normalImportMode: 0
-=======
     normalImportMode: 1
->>>>>>> Stashed changes
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
@@ -100,11 +88,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-<<<<<<< Updated upstream
-    globalScale: 1
-=======
-    globalScale: 0.3908
->>>>>>> Stashed changes
+    globalScale: 0.003908
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
