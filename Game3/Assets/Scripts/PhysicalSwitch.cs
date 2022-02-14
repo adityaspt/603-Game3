@@ -18,19 +18,16 @@ public class PhysicalSwitch : MonoBehaviour
     public bool isPressed;
     private bool prevPressedState;
     public Collider[] CollidersToIgnore;
-    public event EventHandler<EventTriggerSet.eventTrigger> onPressed;
-    public event EventHandler<EventTriggerSet.eventTrigger> onReleased;
+    public event EventHandler onPressed;
+    public event EventHandler onReleased;
 
     //controlled object
 
     [SerializeField]
-    bool isControllingMovingPlatform = false, isControllingGate = false;
+    bool isControllingMovingPlatform=false, isControllingGate=false;
 
     [SerializeField]
     MovingPlatform movingPlatform;
-
-    [SerializeField]
-    Fence movingFence;
 
     // Start is called before the first frame update
     void Start()
@@ -61,37 +58,14 @@ public class PhysicalSwitch : MonoBehaviour
 
     private void OnEnable()
     {
-        if (isControllingMovingPlatform)
-        {
-            onPressed += movingPlatform.onStartMove;
-            onReleased += movingPlatform.Release;
-        }
-        else if (isControllingGate)
-        {
-            onPressed += movingFence.StartFenceMove;
-        }
-        else
-        {
-            Debug.LogWarning("Set the booleans correct in the inspector");
-        }
+        onPressed += movingPlatform.onStartMove;
+        onReleased += movingPlatform.Release;
     }
 
     private void OnDisable()
     {
-        if (isControllingMovingPlatform)
-        {
-            onPressed -= movingPlatform.onStartMove;
-            onReleased -= movingPlatform.Release;
-
-        }
-        else if (isControllingGate)
-        {
-            onPressed -= movingFence.StartFenceMove;
-        }
-        else
-        {
-            Debug.LogWarning("Set the booleans correct in the inspector");
-        }
+        onPressed -= movingPlatform.onStartMove;
+        onReleased -= movingPlatform.Release;
     }
 
     // Update is called once per frame
@@ -120,17 +94,17 @@ public class PhysicalSwitch : MonoBehaviour
             Released();
     }
 
-
+    
 
     void Pressed()
     {
         prevPressedState = isPressed;
-        onPressed?.Invoke(this, new EventTriggerSet.eventTrigger { typeOfEventTrigger = EventTriggerSet.typeOfTrigger.switchButton });
+        onPressed?.Invoke(this, EventArgs.Empty);
     }
 
     void Released()
     {
         prevPressedState = isPressed;
-        onReleased?.Invoke(this, new EventTriggerSet.eventTrigger { typeOfEventTrigger = EventTriggerSet.typeOfTrigger.switchButton });
+        onReleased?.Invoke(this, EventArgs.Empty);
     }
 }

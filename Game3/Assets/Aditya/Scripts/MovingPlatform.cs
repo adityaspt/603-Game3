@@ -33,11 +33,12 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField]
     float moveSpeed;
 
-    [Header("Checks for what kind of switches or button has triggered")]
-    [SerializeField]
-    bool isSwitch = false, isLaser = false;
-    [SerializeField]
-    bool isReleased = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -46,108 +47,63 @@ public class MovingPlatform : MonoBehaviour
         {
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPosition, moveSpeed * Time.deltaTime);
         }
-
         if (transform.localPosition == targetPosition)
         {
-
-            if (isReleased)
-            {
-                startMoving = false;
-                isReleased = false;
-            }
+            startMoving = false;
+            //if (!isMovingTowardsOriginalPos)
+            //{
+            //    isMovingTowardsOriginalPos = true;
+            //}
 
             if (transform.localPosition == startPosition)
             {
                 isMovingTowardsOriginalPos = false;
-                targetPosition = endPosition;
             }
-            else if (transform.localPosition == endPosition)
+            else if(transform.localPosition == endPosition)
             {
                 isMovingTowardsOriginalPos = true;
-                targetPosition = startPosition;
             }
 
+
+            //isAtTargetPosition = true;
             updatedStart = transform.localPosition;
         }
-
-        #region oldcode
-        //if (transform.localPosition == targetPosition)
-        //{
-        //    startMoving = false;
-
-        //    if (transform.localPosition == startPosition)
-        //    {
-        //        isMovingTowardsOriginalPos = false;
-        //    }
-        //    else if (transform.localPosition == endPosition)
-        //    {
-        //        isMovingTowardsOriginalPos = true;
-        //    }
-
-        //    updatedStart = transform.localPosition;
-        //}
-        //else
-        //{
-        //    print("else condition");
-        //}
-        #endregion
     }
 
+    // 4.58,-3.8,12.19
 
-    public void onStartMove(object sender, EventTriggerSet.eventTrigger e)
+    public void onStartMove(object sender, EventArgs e)
     {
-        if (e.typeOfEventTrigger == EventTriggerSet.typeOfTrigger.laser)
-        {
-            isLaser = true;
-        }
-        else
-        {
-            isSwitch = true;
-        }
-        print("Type of event pressed " + e.typeOfEventTrigger);
-
         if (!isMovingTowardsOriginalPos)
         {
-
+           // isMovingTowardsOriginalPos = false;
             targetPosition = endPosition;
             updatedStart = startPosition;
         }
         else
         {
-
+            print("start in y");
+           // isMovingTowardsOriginalPos = true;
             targetPosition = startPosition;
             updatedStart = endPosition;
         }
         startMoving = true;
-
-     
+        //isAtTargetPosition = false;
+        print("pressed");
     }
-  
-    public void Release(object sender, EventTriggerSet.eventTrigger e)
+
+    public void Release(object sender, EventArgs e)
     {
-        print("Type of event released " + e.typeOfEventTrigger);
-        if (e.typeOfEventTrigger == EventTriggerSet.typeOfTrigger.laser)
-        {
-            isLaser = false;
-        }
-        else
-        {
-            isSwitch = false;
-        }
         if (transform.localPosition != startPosition || transform.localPosition != endPosition)
         {
-        
+            print("release");
             targetPosition = updatedStart;
             startMoving = true;
-            if (!isSwitch && !isLaser)
-                isReleased = true;
         }
         else
         {
-            if(!isSwitch && !isLaser)
-            startMoving = false;
-           
+            print("No release needed");
         }
-
+       
     }
 }
