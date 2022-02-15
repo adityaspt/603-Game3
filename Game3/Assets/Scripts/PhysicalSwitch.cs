@@ -97,7 +97,7 @@ public class PhysicalSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        buttonTopRigid.AddForce(buttonTop.transform.up * force * Time.deltaTime);
+        //buttonTopRigid.AddForce(buttonTop.transform.up * force * Time.deltaTime);
         buttonTop.transform.localPosition = new Vector3(0, buttonTop.transform.localPosition.y, 0);
         buttonTop.transform.localEulerAngles = new Vector3(0, 0, 0);
         if (buttonTop.localPosition.y >= 0)
