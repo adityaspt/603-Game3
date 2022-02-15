@@ -156,6 +156,8 @@ public class MovingPlatform : MonoBehaviour
         collision.gameObject.transform.parent = transform;
     }
 
+
+
     public void OnCollisionExit(Collision collision)
     {
         collision.gameObject.transform.parent = null;
