@@ -27,7 +27,7 @@ public class PhysicalSwitch : MonoBehaviour
     bool isControllingMovingPlatform = false, isControllingGate = false;
 
     [SerializeField]
-    MovingPlatform movingPlatform;
+    MovingPlatform[] movingPlatforms;
 
     [SerializeField]
     Fence movingFence;
@@ -63,8 +63,12 @@ public class PhysicalSwitch : MonoBehaviour
     {
         if (isControllingMovingPlatform)
         {
-            onPressed += movingPlatform.onStartMove;
-            onReleased += movingPlatform.Release;
+            for(int i = 0; i < movingPlatforms.Length; i++)
+            {
+                onPressed += movingPlatforms[i].onStartMove;
+                onReleased += movingPlatforms[i].Release;
+            }
+            
         }
         else if (isControllingGate)
         {
@@ -80,8 +84,11 @@ public class PhysicalSwitch : MonoBehaviour
     {
         if (isControllingMovingPlatform)
         {
-            onPressed -= movingPlatform.onStartMove;
-            onReleased -= movingPlatform.Release;
+            for (int i = 0; i < movingPlatforms.Length; i++)
+            {
+                onPressed -= movingPlatforms[i].onStartMove;
+                onReleased -= movingPlatforms[i].Release;
+            }
 
         }
         else if (isControllingGate)
@@ -97,7 +104,7 @@ public class PhysicalSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        buttonTopRigid.AddForce(buttonTop.transform.up * force * Time.deltaTime);
+        //buttonTopRigid.AddForce(buttonTop.transform.up * force * Time.deltaTime);
         buttonTop.transform.localPosition = new Vector3(0, buttonTop.transform.localPosition.y, 0);
         buttonTop.transform.localEulerAngles = new Vector3(0, 0, 0);
         if (buttonTop.localPosition.y >= 0)

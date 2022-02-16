@@ -37,7 +37,7 @@ public class LiftingPlatform : MonoBehaviour
         if (isStarted)
         {
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPosition, moveSpeed * Time.deltaTime);
-            ejector.transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPosition, moveSpeed * Time.deltaTime);
+            if(ejector != null) ejector.transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPosition, moveSpeed * Time.deltaTime);
         }
         if (transform.localPosition == targetPosition)
         {
