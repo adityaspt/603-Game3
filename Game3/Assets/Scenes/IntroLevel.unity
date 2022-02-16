@@ -6976,7 +6976,7 @@ MonoBehaviour:
     ModeOverride: 2
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4590049, y: 1}
+    m_SensorSize: {x: 2.1747766, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -16586,7 +16586,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 46.052982
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -18684,6 +18684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerObject: {fileID: 0}
+  force: 6
 --- !u!65 &1229416676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24392,6 +24393,16 @@ PrefabInstance:
       objectReference: {fileID: 1886567014}
     - target: {fileID: 7586204117892496294, guid: 02011d0b97dd42542ac577355d8b1318,
         type: 3}
+      propertyPath: movingPlatforms.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586204117892496294, guid: 02011d0b97dd42542ac577355d8b1318,
+        type: 3}
+      propertyPath: movingPlatforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 1886567014}
+    - target: {fileID: 7586204117892496294, guid: 02011d0b97dd42542ac577355d8b1318,
+        type: 3}
       propertyPath: CollidersToIgnore.Array.data[0]
       value: 
       objectReference: {fileID: 779505421}
@@ -27382,6 +27393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerObject: {fileID: 0}
+  force: 6
 --- !u!1 &8204707764674294945
 GameObject:
   m_ObjectHideFlags: 0

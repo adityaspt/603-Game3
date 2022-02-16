@@ -6,6 +6,9 @@ public class EjectorScript : MonoBehaviour
 {
 	public Rigidbody triggerObject;
 
+	[SerializeField]
+	float force = 6.0f;
+
 	private void OnTriggerEnter(Collider other)
 	{
 
@@ -31,7 +34,7 @@ public class EjectorScript : MonoBehaviour
 	{
 		if (transform.name != "EjectorTrigger")
 		{
-			transform.GetChild(0).gameObject.GetComponent<EjectorScript>().triggerObject.AddForce(Vector3.up * 6, ForceMode.Impulse);
+			transform.GetChild(0).gameObject.GetComponent<EjectorScript>().triggerObject.AddForce(Vector3.up * force, ForceMode.Impulse);
 			//triggerObject.AddForce(Vector3.up * 10000, ForceMode.Impulse);
 		}
 		
