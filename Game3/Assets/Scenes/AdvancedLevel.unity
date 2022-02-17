@@ -9112,7 +9112,7 @@ MonoBehaviour:
     ModeOverride: 2
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 25.172413, y: 1}
+    m_SensorSize: {x: 1.8688121, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9128,15 +9128,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498386452}
-  m_LocalRotation: {x: 0.102121145, y: 0.039816182, z: -0.004090756, w: 0.99396646}
-  m_LocalPosition: {x: 67.74122, y: 17.08244, z: -30.453314}
+  m_LocalRotation: {x: 0.11326419, y: 0.0051621604, z: -0.0005884828, w: 0.9935513}
+  m_LocalPosition: {x: 67.74122, y: 24.08244, z: -40.453316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1096371210}
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 11.732, y: 0, z: 0}
 --- !u!1001 &501592524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28370,8 +28370,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065413415}
-  m_LocalRotation: {x: 0.102121145, y: 0.039816182, z: -0.004090756, w: 0.99396646}
-  m_LocalPosition: {x: 67.74122, y: 17.08244, z: -30.453314}
+  m_LocalRotation: {x: 0.11326419, y: 0.0051621604, z: -0.0005884828, w: 0.9935513}
+  m_LocalPosition: {x: 67.74122, y: 24.08244, z: -40.453316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29043,7 +29043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7633c93f0364a418841eeb8b058634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 2, y: 1, z: 0}
+  m_TrackedObjectOffset: {x: 0, y: 5, z: 0}
   m_LookaheadTime: 0.2
   m_LookaheadSmoothing: 5
   m_LookaheadIgnoreY: 0
@@ -29083,7 +29083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 8, z: -30}
+  m_FollowOffset: {x: 0, y: 15, z: -40}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -31125,7 +31125,7 @@ Transform:
   - {fileID: 769377884}
   - {fileID: 396632339}
   m_Father: {fileID: 1796115664}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1220958998
 GameObject:
@@ -44224,9 +44224,9 @@ Transform:
   - {fileID: 1565118872}
   - {fileID: 828568161}
   - {fileID: 1494661674}
+  - {fileID: 1212195947}
   - {fileID: 1529630780}
   - {fileID: 1837205874}
-  - {fileID: 1212195947}
   - {fileID: 2089508141}
   - {fileID: 288088421}
   - {fileID: 1350447003}
