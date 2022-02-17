@@ -7,6 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManagerInstance;
 
+    [Header("Scene names")]
+    public string titleSceneName = "Title Screen";
+    public string level1 = "IntroLevel";
+    public string level2 = "AdvancedLevel";
+
     [Header("UI References")]
     [SerializeField]
     GameObject pausePanel;
@@ -14,8 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject gameOverPanel;
 
-    [SerializeField]
-    string titleSceneName = "";
+    
 
     private void Awake()
     {
