@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6888212989868928682}
   - component: {fileID: 7509755321906192655}
   - component: {fileID: 5754744786196207045}
-  - component: {fileID: 1836172915980565765}
   - component: {fileID: 8441740788492421758}
   - component: {fileID: 1836172915980565764}
+  - component: {fileID: 7063349647602202256}
   m_Layer: 0
   m_Name: ejector0
   m_TagString: Untagged
@@ -89,20 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1836172915980565765
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6114772927820739600}
-  m_Material: {fileID: 13400000, guid: 98c0275b144fba94f85402d028b0f6f9, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7868655541062315705, guid: 64e851664d4cbb245a9316fe80dedb25, type: 3}
 --- !u!95 &8441740788492421758
 Animator:
   serializedVersion: 4
@@ -136,6 +122,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerObject: {fileID: 0}
+  force: 6
+--- !u!65 &7063349647602202256
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6114772927820739600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.559516, y: 1.7486912, z: 8.704}
+  m_Center: {x: -0.058613796, y: 0.8743396, z: 0.3184108}
 --- !u!1 &8441740788165929298
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,3 +195,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerObject: {fileID: 0}
+  force: 6
