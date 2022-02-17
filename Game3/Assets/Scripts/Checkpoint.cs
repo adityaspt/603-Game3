@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -10,18 +11,18 @@ public class Checkpoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("CubePlayer") && !isCubeTriggered)
+        if (other.CompareTag("CubePlayer") && !isCubeTriggered)
         {
             isCubeTriggered = true;
             Destroy(other.gameObject);
@@ -32,7 +33,7 @@ public class Checkpoint : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if(isCubeTriggered && isSphereTriggered)
+        if (isCubeTriggered && isSphereTriggered)
         {
             TriggerCheckpoint();
         }
@@ -40,6 +41,18 @@ public class Checkpoint : MonoBehaviour
 
     private void TriggerCheckpoint()
     {
-        GameManager.gameManagerInstance.showGameOverPanel();
+
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName == GameManager.gameManagerInstance.level1)
+        {
+            SceneManager.LoadScene(GameManager.gameManagerInstance.level2);
+        }
+        else
+        {
+            GameManager.gameManagerInstance.showGameOverPanel();
+        }
+        
+
+       
     }
 }

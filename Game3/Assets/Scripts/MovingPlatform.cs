@@ -39,6 +39,11 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField]
     bool isReleased = false;
 
+    private void Start()
+    {
+        startPosition = transform.localPosition;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -137,7 +142,7 @@ public class MovingPlatform : MonoBehaviour
         if (transform.localPosition != startPosition || transform.localPosition != endPosition)
         {
         
-            targetPosition = updatedStart;
+            targetPosition = startPosition;
             startMoving = true;
             if (!isSwitch && !isLaser)
                 isReleased = true;
