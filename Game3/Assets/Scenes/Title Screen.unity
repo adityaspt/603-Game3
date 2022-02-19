@@ -1401,7 +1401,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[Game Name Here]'
+  m_text: 'Box & Ball: Bouncing Metal'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -2620,7 +2620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5279382, g: 0.47843137, b: 0.8, a: 0.9137255}
+  m_Color: {r: 0.5279382, g: 0.47843137, b: 0.8, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3398,7 +3398,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Arrow Keys - Movement
 
-    You''re light and bouncy! Try not to slip!'
+    Enter - Jump
+
+    You''re light and bouncy!
+    Try not to slip!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3407,8 +3410,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284695761
-  m_fontColor: {r: 0.8207547, g: 0.26713243, b: 0.3880554, a: 1}
+    rgba: 4284827599
+  m_fontColor: {r: 0.8113208, g: 0.2793699, b: 0.39632362, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
