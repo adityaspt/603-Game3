@@ -19,7 +19,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject gameOverPanel;
 
-    
+    [Header("Player references")]
+    [SerializeField]
+    GameObject spherePlayer;
+
+    [SerializeField]
+    GameObject cubePlayer;
+
+    [SerializeField]
+    SO_SaveData saveDataObject;
 
     private void Awake()
     {
@@ -30,7 +38,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SetPlayersInScene();
     }
 
     // Update is called once per frame
@@ -43,10 +51,44 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ResumeGame()
+    void SetPlayersInScene()
     {
-        Time.timeScale = 1;
+        if (saveDataObject.shouldLoad)
+        {
+            print("Loading saved player poses");
+            cubePlayer.transform.localPosition = saveDataObject.cubePlayerPosition;
+            spherePlayer.transform.localPosition = saveDataObject.spherePose.spherePlayerPosition;
+            spherePlayer.transform.localEulerAngles = saveDataObject.spherePose.spherePlayerRotation;
+        }
+    }
 
+    void GetCurrentStateOfPlayers()
+    {
+        saveDataObject.cubePlayerPosition = cubePlayer.transform.localPosition;
+        saveDataObject.spherePose.spherePlayerPosition= spherePlayer.transform.localPosition;
+        saveDataObject.spherePose.spherePlayerRotation = spherePlayer.transform.localEulerAngles;
+
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName == level1)
+        {
+            saveDataObject.currentLevel = LevelLocator.currentLevel.Level1;
+        }
+        else if(sceneName == level2)
+        {
+            saveDataObject.currentLevel = LevelLocator.currentLevel.Level2;
+        }
+        else
+        {
+            Debug.LogError("Scene names are not Set properly - Aditya");
+        }
+      
+        saveDataObject.shouldLoad = true;
+    }
+
+
+    public void AutoSaveCheckpoint() //Archit call this for checkpoint triggers
+    {
+        GetCurrentStateOfPlayers();
     }
 
     public void showPausePanel()
@@ -59,14 +101,33 @@ public class GameManager : MonoBehaviour
         gameOverPanel.SetActive(true);
     }
 
+    // Pause Panel
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+
+    }
+
+    public void SaveQuit()
+    {
+        GetCurrentStateOfPlayers();
+        ExitGame();
+    }
+    //
+
+
+    //Game Over Panel
     public void RestartGame()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
     }
+    //
 
     public void ExitGame()
     {
         SceneManager.LoadScene(titleSceneName);
     }
+
+
 }

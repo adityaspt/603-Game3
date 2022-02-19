@@ -738,7 +738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef1cac94cb51574197d915acd2abefd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainGameSceneName: IntroLevel
+  level1: IntroLevel
+  level2: AdvancedLevel
+  saveDataObject: {fileID: 11400000, guid: 3750878bd10d2f948b6f7ea146115321, type: 2}
 --- !u!4 &380309757
 Transform:
   m_ObjectHideFlags: 0
@@ -1290,7 +1292,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 861646731}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 380309756}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: loadGamePlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &861646731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4172,7 +4186,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 380309756}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: play
+        m_MethodName: newGamePlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
