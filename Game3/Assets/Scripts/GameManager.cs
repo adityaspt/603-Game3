@@ -59,8 +59,8 @@ public class GameManager : MonoBehaviour
         if (saveDataObject.shouldLoad)
         {
             print("Loading saved player poses");
-            cubePlayer.transform.localPosition = saveDataObject.cubePlayerPosition;
-            spherePlayer.transform.localPosition = saveDataObject.spherePose.spherePlayerPosition;
+            cubePlayer.transform.position = saveDataObject.cubePlayerPosition;
+            spherePlayer.transform.position = saveDataObject.spherePose.spherePlayerPosition;
             spherePlayer.transform.localEulerAngles = saveDataObject.spherePose.spherePlayerRotation;
         }
     }
@@ -70,8 +70,12 @@ public class GameManager : MonoBehaviour
         print("Saving player poses");
         ShowSavePrompt();
 
-        saveDataObject.cubePlayerPosition = cubePlayer.transform.localPosition;
-        saveDataObject.spherePose.spherePlayerPosition= spherePlayer.transform.localPosition;
+        //saveDataObject.cubePlayerPosition = cubePlayer.transform.localPosition;
+        //saveDataObject.spherePose.spherePlayerPosition= spherePlayer.transform.localPosition;
+
+        saveDataObject.cubePlayerPosition = cubePlayer.transform.position;
+        saveDataObject.spherePose.spherePlayerPosition = spherePlayer.transform.position;
+
         saveDataObject.spherePose.spherePlayerRotation = spherePlayer.transform.localEulerAngles;
 
         string sceneName = SceneManager.GetActiveScene().name;
