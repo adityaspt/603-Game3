@@ -21,6 +21,7 @@ public class LaserButton : MonoBehaviour
     [SerializeField]
     bool isControllingMovingPlatform = false, isControllingLiftingPlatform = false;
 
+    public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -73,6 +74,10 @@ public class LaserButton : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         onPressed?.Invoke(this, new EventTriggerSet.eventTrigger { typeOfEventTrigger = EventTriggerSet.typeOfTrigger.laser });
+        if (gameManager != null)
+        {
+            gameManager.AutoSaveCheckpoint();
+        }
         isTriggered = true;
     }
 

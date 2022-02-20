@@ -9484,6 +9484,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4116637132735979823, guid: f2280213fd95f3b45bc394bf3283ee09,
         type: 3}
+      propertyPath: savePanel
+      value: 
+      objectReference: {fileID: 2487917639255319190}
+    - target: {fileID: 4116637132735979823, guid: f2280213fd95f3b45bc394bf3283ee09,
+        type: 3}
       propertyPath: cubePlayer
       value: 
       objectReference: {fileID: 1235046521}
@@ -31087,7 +31092,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh108874
+  m_Name: pb_Mesh124016
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -41384,6 +41389,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1175454567566748810, guid: 9c15d7cd6213a374ca6a4ba98b43b5a4,
         type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 543076351}
+    - target: {fileID: 1175454567566748810, guid: 9c15d7cd6213a374ca6a4ba98b43b5a4,
+        type: 3}
       propertyPath: liftingPlatformObj
       value: 
       objectReference: {fileID: 2059569973}
@@ -48836,6 +48846,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1796115664}
     m_Modifications:
+    - target: {fileID: 1175454567566748810, guid: 9c15d7cd6213a374ca6a4ba98b43b5a4,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 543076351}
     - target: {fileID: 1175454567566748810, guid: 9c15d7cd6213a374ca6a4ba98b43b5a4,
         type: 3}
       propertyPath: movingPlatformObj
@@ -65733,6 +65748,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 646979286798634567, guid: 1416e972b6ac4d44dbc0f90ab461f7d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2487917638070165234, guid: 1416e972b6ac4d44dbc0f90ab461f7d9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -65875,6 +65895,12 @@ PrefabInstance:
       objectReference: {fileID: 543076351}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1416e972b6ac4d44dbc0f90ab461f7d9, type: 3}
+--- !u!1 &2487917639255319190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 646979286798634567, guid: 1416e972b6ac4d44dbc0f90ab461f7d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2487917639255319189}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &2894963063604169060
 MeshRenderer:
   m_ObjectHideFlags: 0

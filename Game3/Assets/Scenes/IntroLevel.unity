@@ -966,6 +966,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8605691140703557729, guid: cc031f66c34646e4aabd5ef5e2480939,
         type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 276000959}
+    - target: {fileID: 8605691140703557729, guid: cc031f66c34646e4aabd5ef5e2480939,
+        type: 3}
       propertyPath: movingFence
       value: 
       objectReference: {fileID: 984608014}
@@ -14323,6 +14328,7 @@ MonoBehaviour:
   isTriggered: 0
   isControllingMovingPlatform: 0
   isControllingLiftingPlatform: 1
+  gameManager: {fileID: 0}
 --- !u!65 &800302790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15278,6 +15284,12 @@ Transform:
   m_Father: {fileID: 1239054796}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &924343869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 646979286798634567, guid: 1416e972b6ac4d44dbc0f90ab461f7d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2487917639255319189}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &926795211
 GameObject:
   m_ObjectHideFlags: 0
@@ -17356,7 +17368,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065413415}
-  m_LocalRotation: {x: 0.11543381, y: 0.03478008, z: -0.0040443293, w: 0.9926979}
+  m_LocalRotation: {x: 0.11577674, y: 0.0013337533, z: -0.00015546322, w: 0.9932744}
   m_LocalPosition: {x: -45.66235, y: 8.997651, z: -30.813398}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17544,6 +17556,7 @@ MonoBehaviour:
   isTriggered: 0
   isControllingMovingPlatform: 1
   isControllingLiftingPlatform: 0
+  gameManager: {fileID: 276000959}
 --- !u!65 &1099721160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24988,22 +25001,22 @@ PrefabInstance:
     - target: {fileID: 7432886597488656707, guid: bc76ada91ef7a3a4083c921a918ae78f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9926979
+      value: 0.9932744
       objectReference: {fileID: 0}
     - target: {fileID: 7432886597488656707, guid: bc76ada91ef7a3a4083c921a918ae78f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.11543381
+      value: 0.11577674
       objectReference: {fileID: 0}
     - target: {fileID: 7432886597488656707, guid: bc76ada91ef7a3a4083c921a918ae78f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.03478008
+      value: 0.0013337533
       objectReference: {fileID: 0}
     - target: {fileID: 7432886597488656707, guid: bc76ada91ef7a3a4083c921a918ae78f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0040443293
+      value: -0.00015546322
       objectReference: {fileID: 0}
     - target: {fileID: 7432886597488656707, guid: bc76ada91ef7a3a4083c921a918ae78f,
         type: 3}
@@ -25018,6 +25031,11 @@ PrefabInstance:
     - target: {fileID: 7432886597488656707, guid: bc76ada91ef7a3a4083c921a918ae78f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432886598510791515, guid: bc76ada91ef7a3a4083c921a918ae78f,
+        type: 3}
+      propertyPath: m_TrackedObjectOffset.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -25165,6 +25183,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7586204117892496294, guid: 02011d0b97dd42542ac577355d8b1318,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 276000959}
     - target: {fileID: 7586204117892496294, guid: 02011d0b97dd42542ac577355d8b1318,
         type: 3}
       propertyPath: movingPlatform
@@ -25349,6 +25372,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 646979286798634567, guid: 1416e972b6ac4d44dbc0f90ab461f7d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2487917638070165234, guid: 1416e972b6ac4d44dbc0f90ab461f7d9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -26121,6 +26149,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4116637132735979823, guid: f2280213fd95f3b45bc394bf3283ee09,
+        type: 3}
+      propertyPath: savePanel
+      value: 
+      objectReference: {fileID: 924343869}
     - target: {fileID: 4116637132735979823, guid: f2280213fd95f3b45bc394bf3283ee09,
         type: 3}
       propertyPath: cubePlayer
@@ -27875,6 +27908,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1796115664}
     m_Modifications:
+    - target: {fileID: 1175454567566748810, guid: 9c15d7cd6213a374ca6a4ba98b43b5a4,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 276000959}
     - target: {fileID: 1175454567566748810, guid: 9c15d7cd6213a374ca6a4ba98b43b5a4,
         type: 3}
       propertyPath: liftingPlatformObj

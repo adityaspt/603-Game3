@@ -21,6 +21,8 @@ public class PhysicalSwitch : MonoBehaviour
     public event EventHandler<EventTriggerSet.eventTrigger> onPressed;
     public event EventHandler<EventTriggerSet.eventTrigger> onReleased;
 
+    public GameManager gameManager;
+
     //controlled object
 
     [SerializeField]
@@ -66,6 +68,7 @@ public class PhysicalSwitch : MonoBehaviour
             for(int i = 0; i < movingPlatforms.Length; i++)
             {
                 onPressed += movingPlatforms[i].onStartMove;
+           
                 onReleased += movingPlatforms[i].Release;
             }
             
@@ -122,9 +125,13 @@ public class PhysicalSwitch : MonoBehaviour
             isPressed = false;
 
         if (isPressed && prevPressedState != isPressed)
+        {
             Pressed();
+        }
         if (!isPressed && prevPressedState != isPressed)
+        {
             Released();
+        }
     }
 
 
@@ -133,6 +140,10 @@ public class PhysicalSwitch : MonoBehaviour
     {
         prevPressedState = isPressed;
         onPressed?.Invoke(this, new EventTriggerSet.eventTrigger { typeOfEventTrigger = EventTriggerSet.typeOfTrigger.switchButton });
+        if (gameManager != null)
+        {
+            gameManager.AutoSaveCheckpoint();
+        }
     }
 
     void Released()

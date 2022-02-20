@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject gameOverPanel;
 
+    [SerializeField]
+    GameObject savePanel;
+
     [Header("Player references")]
     [SerializeField]
     GameObject spherePlayer;
@@ -64,6 +67,9 @@ public class GameManager : MonoBehaviour
 
     void GetCurrentStateOfPlayers()
     {
+        print("Saving player poses");
+        ShowSavePrompt();
+
         saveDataObject.cubePlayerPosition = cubePlayer.transform.localPosition;
         saveDataObject.spherePose.spherePlayerPosition= spherePlayer.transform.localPosition;
         saveDataObject.spherePose.spherePlayerRotation = spherePlayer.transform.localEulerAngles;
@@ -129,5 +135,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(titleSceneName);
     }
 
+    private void ShowSavePrompt()
+    {
+        StartCoroutine(ShowSaveCoroutine());
+    }
 
+    IEnumerator ShowSaveCoroutine()
+    {
+        savePanel.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3);
+        savePanel.gameObject.SetActive(false);
+
+        yield break;
+    }
 }

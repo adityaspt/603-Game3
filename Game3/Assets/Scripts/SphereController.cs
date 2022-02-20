@@ -46,22 +46,22 @@ public class SphereController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Rotate(Vector3.right * speed);
+            transform.Rotate(Vector3.right * -speed);
             rb.AddForce(Vector3.forward * speed);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Rotate(Vector3.right * -speed);
+            transform.Rotate(Vector3.right * speed);
             rb.AddForce(Vector3.forward * -speed);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Rotate(Vector3.forward * speed);
+            transform.Rotate(Vector3.forward * -speed);
             rb.AddForce(Vector3.right * -speed);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Rotate(Vector3.forward * -speed);
+            transform.Rotate(Vector3.forward * speed);
             rb.AddForce(Vector3.right * speed);
         }
 
