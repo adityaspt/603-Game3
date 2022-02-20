@@ -11,6 +11,9 @@ public class LaserButton : MonoBehaviour
     [SerializeField]
     LiftingPlatform liftingPlatformObj;
 
+    [SerializeField]
+    bool isTriggered = false;
+
     public event EventHandler<EventTriggerSet.eventTrigger> onPressed;
 
     public event EventHandler<EventTriggerSet.eventTrigger> onReleased;
@@ -70,6 +73,7 @@ public class LaserButton : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         onPressed?.Invoke(this, new EventTriggerSet.eventTrigger { typeOfEventTrigger = EventTriggerSet.typeOfTrigger.laser });
+        isTriggered = true;
     }
 
     private void OnTriggerStay(Collider other)
@@ -80,6 +84,7 @@ public class LaserButton : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         onReleased?.Invoke(this, new EventTriggerSet.eventTrigger { typeOfEventTrigger = EventTriggerSet.typeOfTrigger.laser });
+        isTriggered = false;
     }
 
 
