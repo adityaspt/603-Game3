@@ -27374,6 +27374,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 31841283898713319, guid: 65c75e2be852bdd4883a000167981095,
+        type: 3}
+      propertyPath: m_TrackedObjectOffset.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 31841284487655164, guid: 65c75e2be852bdd4883a000167981095,
         type: 3}
       propertyPath: m_Follow
@@ -27417,22 +27422,22 @@ PrefabInstance:
     - target: {fileID: 31841284487655167, guid: 65c75e2be852bdd4883a000167981095,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9925832
+      value: 0.98951465
       objectReference: {fileID: 0}
     - target: {fileID: 31841284487655167, guid: 65c75e2be852bdd4883a000167981095,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12156721
+      value: 0.14443257
       objectReference: {fileID: 0}
     - target: {fileID: 31841284487655167, guid: 65c75e2be852bdd4883a000167981095,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000042696917
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 31841284487655167, guid: 65c75e2be852bdd4883a000167981095,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 5.229329e-10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 31841284487655167, guid: 65c75e2be852bdd4883a000167981095,
         type: 3}
@@ -28688,7 +28693,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065413415}
-  m_LocalRotation: {x: 0.12156721, y: -0.0000000042696917, z: 5.229329e-10, w: 0.9925832}
+  m_LocalRotation: {x: 0.14443257, y: 0, z: 0, w: 0.98951465}
   m_LocalPosition: {x: -45, y: 16, z: -41.333332}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41148,7 +41153,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29064
+  m_Name: pb_Mesh107768
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
