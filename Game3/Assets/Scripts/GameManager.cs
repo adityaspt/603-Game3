@@ -152,4 +152,20 @@ public class GameManager : MonoBehaviour
 
         yield break;
     }
+
+    public void ResetPosLev1()
+    {
+        saveDataObject.cubePlayerPosition = new Vector3(-45, 1, -2);
+        saveDataObject.spherePose.spherePlayerPosition = new Vector3(-45, 1, 0);
+
+        saveDataObject.spherePose.spherePlayerRotation = Vector3.zero;
+    }
+
+    public void ResetPosLev2()
+    {
+        saveDataObject.cubePlayerPosition = new Vector3(-45, 1, -2);
+        saveDataObject.spherePose.spherePlayerPosition = new Vector3(-45, 1, 0);
+
+        saveDataObject.spherePose.spherePlayerRotation = Vector3.zero;
+    }
 }

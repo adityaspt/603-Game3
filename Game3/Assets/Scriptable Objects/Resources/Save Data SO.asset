@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Save Data SO
   m_EditorClassIdentifier: 
   shouldLoad: 0
-  cubePlayerPosition: {x: -39, y: 0.91, z: 0}
+  cubePlayerPosition: {x: -45, y: 1, z: -2}
   spherePose:
-    spherePlayerPosition: {x: -37.75, y: 1.16, z: -2.32}
-    spherePlayerRotation: {x: 0, y: 0, z: -45}
+    spherePlayerPosition: {x: -45, y: 1, z: 0}
+    spherePlayerRotation: {x: 0, y: 0, z: 0}
   currentLevel: 0
